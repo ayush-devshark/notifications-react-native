@@ -83,11 +83,28 @@ export default function App() {
     });
   }
 
+  function sendPushNotificationHandler() {
+    fetch("https://exp.host/--/api/v2/push/send", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        to: "ExponentPushToken[tztctYA_bc3C8qMdT8zkPK]",
+        title: "hello",
+        body: "world",
+      }),
+    });
+  }
+
   return (
     <View style={styles.container}>
       <Button
         title="Schedule Notification"
         onPress={scheduleNotificationHandler}
+      />
+      <View style={{ height: 10 }}></View>
+      <Button
+        title="Send Push Notification"
+        onPress={sendPushNotificationHandler}
       />
       <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
