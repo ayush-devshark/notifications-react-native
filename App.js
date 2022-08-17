@@ -88,7 +88,7 @@ export default function App() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        to: "ExponentPushToken[tztctYA_bc3C8qMdT8zkPK]",
+        to: "ExponentPushToken[*************]",
         title: "hello",
         body: "world",
       }),
